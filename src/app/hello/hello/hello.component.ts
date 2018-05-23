@@ -21,7 +21,7 @@ export class HelloComponent implements OnInit {
   }
 
   ngOnInit() {
-    setInterval(this.showCongratulation, 3000);
+    setInterval(this.showCongratulation, 1000);
   }
 
   showCongratulation = () => {
