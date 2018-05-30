@@ -1,7 +1,7 @@
 <div class="card">
   <div class="container">
-    <p>
-      {{congratulation}}!
+    <p *ngFor="let congratulation of congratulations; index as i;">
+      Номер:{{i+1}}, Значение: '{{congratulation}}'!
     </p>
   </div>
 </div>

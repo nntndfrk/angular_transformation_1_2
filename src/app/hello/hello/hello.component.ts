@@ -5,7 +5,7 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './hello.component.html',
   styleUrls: ['./hello.component.css']
 })
-export class HelloComponent implements OnInit {
+export class HelloComponent {
   congratulations = [
     'Hello World',
     'Привет Мир',
@@ -14,19 +14,6 @@ export class HelloComponent implements OnInit {
     'Bonjour le monde',
   ];
 
-  congratulation = '';
-
   constructor() {
-    this.showCongratulation();
   }
-
-  ngOnInit() {
-    setInterval(this.showCongratulation, 1000);
-  }
-
-  showCongratulation = () => {
-    this.congratulation = this.congratulations.splice(0, 1)[0];
-    this.congratulations.push(this.congratulation);
-  }
-
 }
